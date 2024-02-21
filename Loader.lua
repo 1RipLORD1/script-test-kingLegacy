@@ -73,11 +73,6 @@ local PlayerTab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 })
 
---SECTIONS
-local PlayerSection = PlayerTab:AddSection({
-	Name = "Player"
-})
-
 --BUTTONS BuyKey
 ShopTab:AddButton({
 	Name = "Buy Key Copper",
@@ -127,15 +122,6 @@ PlayerTab:AddButton({
     attack()
   	end
 })
-
---SLIDERS
-PlayerSection:NewSlider("WalkSpeed", "WalkSpeed", 500, 0, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-PlayerSection:NewSlider("JumpPower", "JumpPower", 500, 16, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
 
 end
 OrionLib:Init()
